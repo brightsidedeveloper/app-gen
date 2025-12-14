@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Release script for template-cli
+# Release script for app-gen
 # Usage: ./scripts/release.sh <version>
 # Example: ./scripts/release.sh 1.0.0
 
@@ -23,22 +23,22 @@ mkdir -p dist
 
 # Build for multiple platforms
 echo "Building for Linux (amd64)..."
-GOOS=linux GOARCH=amd64 go build -o dist/template-cli-linux-amd64
+GOOS=linux GOARCH=amd64 go build -o dist/app-gen-linux-amd64
 
 echo "Building for Linux (arm64)..."
-GOOS=linux GOARCH=arm64 go build -o dist/template-cli-linux-arm64
+GOOS=linux GOARCH=arm64 go build -o dist/app-gen-linux-arm64
 
 echo "Building for macOS (amd64)..."
-GOOS=darwin GOARCH=amd64 go build -o dist/template-cli-darwin-amd64
+GOOS=darwin GOARCH=amd64 go build -o dist/app-gen-darwin-amd64
 
 echo "Building for macOS (arm64)..."
-GOOS=darwin GOARCH=arm64 go build -o dist/template-cli-darwin-arm64
+GOOS=darwin GOARCH=arm64 go build -o dist/app-gen-darwin-arm64
 
 echo "Building for Windows (amd64)..."
-GOOS=windows GOARCH=amd64 go build -o dist/template-cli-windows-amd64.exe
+GOOS=windows GOARCH=amd64 go build -o dist/app-gen-windows-amd64.exe
 
 echo "Building for Windows (arm64)..."
-GOOS=windows GOARCH=arm64 go build -o dist/template-cli-windows-arm64.exe
+GOOS=windows GOARCH=arm64 go build -o dist/app-gen-windows-arm64.exe
 
 # Create checksums
 echo "Creating checksums..."

@@ -1,6 +1,6 @@
 # Release Guide
 
-This guide explains how to release new versions of the template-cli tool.
+This guide explains how to release new versions of the app-gen tool.
 
 ## Automated Release (Recommended)
 
@@ -34,12 +34,12 @@ If you prefer to build locally:
    ```
 
 2. **This creates binaries in the `dist/` directory:**
-   - `template-cli-linux-amd64`
-   - `template-cli-linux-arm64`
-   - `template-cli-darwin-amd64`
-   - `template-cli-darwin-arm64`
-   - `template-cli-windows-amd64.exe`
-   - `template-cli-windows-arm64.exe`
+   - `app-gen-linux-amd64`
+   - `app-gen-linux-arm64`
+   - `app-gen-darwin-amd64`
+   - `app-gen-darwin-arm64`
+   - `app-gen-windows-amd64.exe`
+   - `app-gen-windows-arm64.exe`
    - `checksums.txt`
 
 3. **Create a GitHub release:**
@@ -62,8 +62,8 @@ Follow [Semantic Versioning](https://semver.org/):
 Before releasing, test the binary on your platform:
 
 ```bash
-go build -o template-cli
-./template-cli --name test-project
+go build -o app-gen
+./app-gen --name test-project
 ```
 
 Make sure it works correctly before tagging and releasing!

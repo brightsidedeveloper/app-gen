@@ -6,19 +6,19 @@ A CLI tool to create a new project by cloning the template repository and custom
 
 ### Option 1: Download Pre-built Binary (Recommended)
 
-1. Go to the [Releases page](https://github.com/brightsidedeveloper/template-cli/releases)
+1. Go to the [Releases page](https://github.com/brightsidedeveloper/app-gen/releases)
 2. Download the binary for your platform:
-   - **macOS (Intel)**: `template-cli-darwin-amd64`
-   - **macOS (Apple Silicon)**: `template-cli-darwin-arm64`
-   - **Linux (Intel)**: `template-cli-linux-amd64`
-   - **Linux (ARM)**: `template-cli-linux-arm64`
-   - **Windows (Intel)**: `template-cli-windows-amd64.exe`
-   - **Windows (ARM)**: `template-cli-windows-arm64.exe`
+   - **macOS (Intel)**: `app-gen-darwin-amd64`
+   - **macOS (Apple Silicon)**: `app-gen-darwin-arm64`
+   - **Linux (Intel)**: `app-gen-linux-amd64`
+   - **Linux (ARM)**: `app-gen-linux-arm64`
+   - **Windows (Intel)**: `app-gen-windows-amd64.exe`
+   - **Windows (ARM)**: `app-gen-windows-arm64.exe`
 
 3. Make it executable (macOS/Linux):
    ```bash
-   chmod +x template-cli-darwin-amd64
-   mv template-cli-darwin-amd64 /usr/local/bin/template-cli
+   chmod +x app-gen-darwin-amd64
+   mv app-gen-darwin-amd64 /usr/local/bin/app-gen
    ```
 
 4. Or move it to a directory in your PATH (Windows: add to PATH environment variable)
@@ -26,7 +26,7 @@ A CLI tool to create a new project by cloning the template repository and custom
 ### Option 2: Install via Go (if repository is public)
 
 ```bash
-go install github.com/brightsidedeveloper/template-cli@latest
+go install github.com/brightsidedeveloper/app-gen@latest
 ```
 
 This will install the binary to `$GOPATH/bin` or `$HOME/go/bin` (make sure it's in your PATH).
@@ -34,18 +34,18 @@ This will install the binary to `$GOPATH/bin` or `$HOME/go/bin` (make sure it's 
 ### Option 3: Build from Source
 
 ```bash
-git clone https://github.com/brightsidedeveloper/template-cli.git
-cd template-cli
-go build -o template-cli
-# Move to your PATH or use ./template-cli
+git clone https://github.com/brightsidedeveloper/app-gen.git
+cd app-gen
+go build -o app-gen
+# Move to your PATH or use ./app-gen
 ```
 
 ## Usage
 
 ```bash
 cd cli
-go build -o template-cli
-./template-cli --name myapp
+go build -o app-gen
+./app-gen --name myapp
 ```
 
 Or install globally:
@@ -53,7 +53,7 @@ Or install globally:
 ```bash
 cd cli
 go install
-template-cli --name myapp
+app-gen --name myapp
 ```
 
 ## Options
@@ -66,7 +66,7 @@ template-cli --name myapp
 ### Basic usage:
 
 ```bash
-./template-cli --name myapp
+./app-gen --name myapp
 ```
 
 This will:
@@ -78,7 +78,7 @@ This will:
 ### Custom target directory:
 
 ```bash
-./template-cli --name myapp --dir my-new-project
+./app-gen --name myapp --dir my-new-project
 ```
 
 ## What it does
